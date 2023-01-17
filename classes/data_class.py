@@ -12,9 +12,7 @@ pd.options.display.float_format = '{:,.2f}'.format
 
 #reading csv file
 path=os.path.join('classes','processed_super_store.csv')
-#print(os.listdir())
-#print(path)
-#print('%%%%%%%%%%%%%%% preparing to read %%%%%%%%%%%%%%%%')
+
 data = pd.read_csv(path,encoding = 'latin1')
 
 #What is the sales and profit per market?
@@ -182,7 +180,6 @@ def most_profitable_products_per_region(n):
     #result=result.head(n)
     fig = px.bar(result.head(n), x='Product_Name', y='Profit_Margin',
              hover_data=['Product_Name', 'Profit_Margin'],color='Region', 
-             
              #height=400,
              #text_auto='.4s',
              labels={'Product_Name':'Product','Profit_Margin':'Profit Margin'},
